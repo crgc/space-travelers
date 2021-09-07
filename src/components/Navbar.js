@@ -1,5 +1,5 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   const sections = [
@@ -30,8 +30,9 @@ const Navigation = () => {
             width="30"
             height="30"
             className="d-inline-block align-top mx-3"
-          />{' '}
-        SPACE TRAVELER'S HUB
+          />
+          {' '}
+          SPACE TRAVELER&apos;S HUB
         </Navbar.Brand>
         <Nav>
           {sections.map((section) => (
@@ -44,7 +45,7 @@ const Navigation = () => {
                 {section.text}
               </NavLink>
             </Nav.Link>
-            ))}
+          ))}
         </Nav>
       </Container>
     </Navbar>
