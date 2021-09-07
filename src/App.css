@@ -1,0 +1,12 @@
+.App {
+  min-height: 100vh;
+  text-align: center;
+}
+
+.navbar-container {
+  max-width: 80% !important;
+}
+
+.active-link {
+  color: #2980b9;
+}
