@@ -13,6 +13,11 @@ export const fetchFailure = (err) => ({
   err,
 });
 
+export const join = (id) => ({
+  type: JOIN_MISSION,
+  id,
+});
+
 const spaceXAPI = {
   getMissions() {
     const missions = axios.get('https://api.spacexdata.com/v3/missions')
