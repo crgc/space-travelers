@@ -1,38 +1,52 @@
+/* eslint-disable */
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Table, Badge} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button'
 
 const MissionsTable = (props) => {
   const { missions, joinMission, leaveMission } = props;
 
   return (
-    <div>
-      {
+    <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+          </tr>
+      </thead>
+        <tbody>
+        {
                 missions.map((mission) => (
-                  <div key={mission.mission_id} className="missions">
-                    <div>
-                      Name:
+                  <tr key={mission.mission_id} className="missions">
+                    <td>
                       {mission.mission_name}
-                    </div>
-                    <div style={{ fontSize: '8px' }}>
-                      Discription:
+                    </td>
+                    <td style={{ fontSize: '8px' }}>
                       {mission.description}
-                    </div>
-                    <div>
-                      {mission.reserved && (
-                      <button type="button" onClick={() => leaveMission(mission.mission_id)}>Leave Mission</button>
-                      )}
-
-                      {mission.reserved && (
-                      <button type="button">Active Member</button>
-                      )}
+                    </td>
+                    <td>
+                         {mission.reserved && (
+                          <Badge>Active Member</Badge>
+                      )} 
                       {!mission.reserved && (
-                        <button type="button" onClick={() => joinMission(mission.mission_id)}>Join Mission</button>
+                      <Badge bg="secondary">Not A Member</Badge>
                       )}
-                    </div>
-                  </div>
+                    </td>
+                    <td>
+                    {mission.reserved && (
+                      <Button variant="danger" onClick={() => leaveMission(mission.mission_id)}>Leave Mission</Button>
+                      )}
+                    {!mission.reserved && (
+                        <Button variant="secondary"  onClick={() => joinMission(mission.mission_id)}>Join Mission</Button>
+                      )}
+                    </td>
+                  </tr>
                 ))
             }
-    </div>
+       </tbody>
+    </Table>
   );
 };
 
