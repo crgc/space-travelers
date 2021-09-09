@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {
-  REQUEST_FAILURE, FETCH_MISSIONS,
+  REQUEST_FAILURE, FETCH_MISSIONS, JOIN_MISSION, LEAVE_MISSION,
 } from './missionsTypes';
 
 export const getInfo = (payload) => ({
@@ -11,6 +11,16 @@ export const getInfo = (payload) => ({
 export const fetchFailure = (err) => ({
   type: REQUEST_FAILURE,
   err,
+});
+
+export const join = (id) => ({
+  type: JOIN_MISSION,
+  id,
+});
+
+export const leave = (id) => ({
+  type: LEAVE_MISSION,
+  id,
 });
 
 const spaceXAPI = {
