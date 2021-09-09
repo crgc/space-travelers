@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const MissionsDisplay = (props) => {
+const MissionsTable = (props) => {
   const { missions } = props;
   return (
     <div>
@@ -15,6 +15,10 @@ const MissionsDisplay = (props) => {
                       Discription:
                       {mission.description}
                     </div>
+                    <div>
+                      <button type="button">Not a Member</button>
+                      <button type="button">Join Mission</button>
+                    </div>
                   </div>
                 ))
             }
@@ -22,8 +26,8 @@ const MissionsDisplay = (props) => {
   );
 };
 
-MissionsDisplay.propTypes = {
+MissionsTable.propTypes = {
   missions: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default MissionsDisplay;
+export default MissionsTable;

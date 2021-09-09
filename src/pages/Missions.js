@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissions } from '../redux/missions/missionsActions';
-import MissionsDisplay from '../components/missions/MissionsDisplay';
+import MissionsTable from '../components/missions/MissionsDisplay';
 
 const Missions = () => {
   const store = useSelector((state) => state);
@@ -14,7 +14,7 @@ const Missions = () => {
   return (
     <div>
       <h1>Missions</h1>
-      <MissionsDisplay missions={missionsList} />
+      <MissionsTable missions={missionsList} />
     </div>
   );
 };
