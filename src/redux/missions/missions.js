@@ -1,5 +1,5 @@
 import {
-  FETCH_MISSIONS, REQUEST_FAILURE,
+  FETCH_MISSIONS, JOIN_MISSION, REQUEST_FAILURE, LEAVE_MISSION,
 } from './missionsTypes';
 
 const initialState = [];
@@ -16,6 +16,18 @@ const reducer = (state = initialState, action) => {
         return {
           ...mission,
           reserved: true,
+        };
+      });
+      return newState;
+    }
+    case LEAVE_MISSION: {
+      const newState = state.map((mission) => {
+        if (mission.mission_id !== action.id) {
+          return mission;
+        }
+        return {
+          ...mission,
+          reserved: false,
         };
       });
       return newState;
