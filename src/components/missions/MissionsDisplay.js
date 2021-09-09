@@ -1,7 +1,10 @@
+/* eslint-disable */
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const MissionsTable = (props) => {
-  const { missions } = props;
+  const { missions, joinMission, leaveMission } = props;  
+
   return (
     <div>
       {
@@ -16,8 +19,16 @@ const MissionsTable = (props) => {
                       {mission.description}
                     </div>
                     <div>
-                      <button type="button">Not a Member</button>
-                      <button type="button">Join Mission</button>
+                    {mission.reserved && ( 
+                        <button type="button" onClick={() => leaveMission(mission.mission_id)}>Leave Mission</button>
+                    )}
+
+                    {mission.reserved && ( 
+                        <button type="button">Active Member</button>
+                    )}
+                      {!mission.reserved && ( 
+                        <button type="button" onClick={() => joinMission(mission.mission_id)}>Join Mission</button>
+                    )}
                     </div>
                   </div>
                 ))
