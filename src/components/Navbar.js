@@ -21,9 +21,9 @@ const Navigation = () => {
   ];
 
   return (
-    <Navbar className="py-4" bg="light">
+    <Navbar className="py-4">
       <Container className="navbar-container d-flex flex-row justify-content-between">
-        <Navbar.Brand href="/">
+        <Navbar.Brand className="navbar-title" href="/">
           <img
             alt="Space Traveler's Hub"
             src="logo.svg"
@@ -32,7 +32,7 @@ const Navigation = () => {
             className="d-inline-block align-top mx-3"
           />
           {' '}
-          SPACE TRAVELER&apos;S HUB
+          Space Traveler&apos;s Hub
         </Navbar.Brand>
         <Nav>
           {sections.map((section) => (

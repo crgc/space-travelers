@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <hr className="navbar-separator" />
       <Switch>
         <Route exact path="/">
           <Rockets />
