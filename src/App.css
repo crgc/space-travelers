@@ -8,9 +8,33 @@ a {
 }
 
 .navbar-container {
-  max-width: 80% !important;
+  max-width: 90% !important;
+}
+
+.navbar-title {
+  font-size: 1.5rem !important;
+}
+
+.navbar-separator {
+  height: 2px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: black;
 }
 
 .active-link {
   text-decoration: underline !important;
+}
+
+.rockets-container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.rocket-info {
+  text-align: left;
+}
+
+.rocket-img {
+  max-width: 400px;
 }
