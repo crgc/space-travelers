@@ -1,9 +1,8 @@
-/* eslint-disable */
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const MissionsTable = (props) => {
-  const { missions, joinMission, leaveMission } = props;  
+  const { missions, joinMission, leaveMission } = props;
 
   return (
     <div>
@@ -19,16 +18,16 @@ const MissionsTable = (props) => {
                       {mission.description}
                     </div>
                     <div>
-                    {mission.reserved && ( 
-                        <button type="button" onClick={() => leaveMission(mission.mission_id)}>Leave Mission</button>
-                    )}
+                      {mission.reserved && (
+                      <button type="button" onClick={() => leaveMission(mission.mission_id)}>Leave Mission</button>
+                      )}
 
-                    {mission.reserved && ( 
-                        <button type="button">Active Member</button>
-                    )}
-                      {!mission.reserved && ( 
+                      {mission.reserved && (
+                      <button type="button">Active Member</button>
+                      )}
+                      {!mission.reserved && (
                         <button type="button" onClick={() => joinMission(mission.mission_id)}>Join Mission</button>
-                    )}
+                      )}
                     </div>
                   </div>
                 ))
@@ -39,6 +38,8 @@ const MissionsTable = (props) => {
 
 MissionsTable.propTypes = {
   missions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  leaveMission: PropTypes.func.isRequired,
+  joinMission: PropTypes.func.isRequired,
 };
 
 export default MissionsTable;
