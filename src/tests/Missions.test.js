@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Missions from '../pages/Missions'
 import { Provider } from 'react-redux';
+import Missions from '../pages/Missions';
 import store from '../redux/configureStore';
 
 it('Missions page renders correctly', async () => {
