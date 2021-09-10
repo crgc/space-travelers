@@ -1,7 +1,18 @@
+import { useDispatch } from 'react-redux';
 import { Button, Badge } from 'react-bootstrap';
+import { reserve, cancel } from '../../redux/rockets/rockets';
 
 const Rocket = (props) => {
-  const { name, description, imageUrl } = props; /* eslint-disable-line react/prop-types */
+  const { id, name, description, imageUrl, reserved } = props; /* eslint-disable-line react/prop-types */
+  const dispatch = useDispatch();
+
+  const reserveRocket = (id) => {
+    dispatch(reserve(id));
+  };
+
+  const cancelReservation = (id) => {
+    dispatch(cancel(id));
+  };
 
   return (
     <article className="d-flex flex-row mb-4">
@@ -9,10 +20,17 @@ const Rocket = (props) => {
       <div className="rocket-info">
         <h3 className="rocket-name">{ name }</h3>
         <p>
-          <Badge className="rocket-reserved">Reserved</Badge>
+          {reserved && (
+            <Badge className="rocket-reserved">Reserved</Badge>
+          )}
           { description }
         </p>
-        <Button>Reserve Rocket</Button>
+          {reserved && (
+            <Button variant="light" onClick={() => cancelReservation(id)}>Cancel Reservation</Button>
+          )}
+          {!reserved && (
+            <Button onClick={() => reserveRocket(id)}>Reserve Rocket</Button>
+          )}
       </div>
     </article>
   );
