@@ -28,7 +28,7 @@ const Rocket = (props) => {
           { description }
         </p>
         {reserved && (
-        <Button variant="light" onClick={() => cancelReservation(id)}>Cancel Reservation</Button>
+        <Button variant="outline-secondary" onClick={() => cancelReservation(id)}>Cancel Reservation</Button>
         )}
         {!reserved && (
         <Button onClick={() => reserveRocket(id)}>Reserve Rocket</Button>
