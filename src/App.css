@@ -26,6 +26,7 @@ a {
   text-decoration: underline !important;
 }
 
+.missions-container,
 .profile-container,
 .rockets-container {
   max-width: 85%;
@@ -36,8 +37,12 @@ a {
   text-align: left;
 }
 
-.rocket-reserved {
+.rocket-reserved,
+.active-member {
   background-color: #18a2b8;
+}
+
+.rocket-reserved {
   margin-right: 1rem;
 }
 
@@ -52,4 +57,8 @@ a {
 
 .p-1rem {
   padding: 1rem 1rem !important;
+}
+
+.mission-btn {
+  min-width: 130px !important;
 }
