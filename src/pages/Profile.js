@@ -3,9 +3,11 @@ import MyItems from '../components/profile/MyItems';
 
   const storeMissions = useSelector((state) => state.missionsReducer);
   const rockets = useSelector((state) => state.rocketsReducer);
-    <MyItems title="My Missions" items={[{ id: 1, name: 'Telstar' }]} />
-    <MyItems title="My Rockets" items={[{ id: 1, name: 'Falcon 1' }]} />
-  </div>
-);
+
+  const missionsReverved = storeMissions.filter(((mission) => mission.reserved))
+    .map((mission) => ({
+      id: mission.mission_id,
+      name: mission.mission_name,
+    }));
 
 export default Profile;
