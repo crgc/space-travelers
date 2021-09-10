@@ -26,6 +26,7 @@ a {
   text-decoration: underline !important;
 }
 
+.profile-container,
 .rockets-container {
   max-width: 85%;
   margin: 0 auto;
@@ -42,4 +43,13 @@ a {
 
 .rocket-img {
   max-width: 400px;
+}
+
+.list-group-container {
+  width: 40%;
+  text-align: left;
+}
+
+.p-1rem {
+  padding: 1rem 1rem !important;
 }
