@@ -21,7 +21,6 @@ const Missions = () => {
 
   return (
     <div>
-      <h1>Missions</h1>
       <MissionsTable
         missions={missionsList}
         joinMission={joinMission}
