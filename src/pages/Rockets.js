@@ -5,12 +5,13 @@ import { getRockets } from '../redux/rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
+  const rockets = useSelector((state) => state.rocketsReducer);
 
   useEffect(() => {
-    dispatch(getRockets());
+    if (rockets.length === 0) {
+      dispatch(getRockets());
+    }
   }, []);
-
-  const rockets = useSelector((state) => state.rocketsReducer);
 
   return (
     <div className="rockets-container mt-4">
