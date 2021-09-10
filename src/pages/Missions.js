@@ -23,26 +23,29 @@ const Missions = () => {
   const missionsList = store;
 
   return (
-    <Table>
-      <thead>
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {missionsList.map((mission) => (
-          <Mission
-            mission={mission}
-            key={mission.mission_id}
-            joinMission={joinMission}
-            leaveMission={leaveMission}
-          />
-        ))}
+    <div className="missions-container">
+      <Table>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          {missionsList.map((mission) => (
+            <Mission
+              mission={mission}
+              key={mission.mission_id}
+              joinMission={joinMission}
+              leaveMission={leaveMission}
+            />
+          ))}
 
-      </tbody>
-    </Table>
+        </tbody>
+      </Table>
+    </div>
   );
 };
 

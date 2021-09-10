@@ -9,15 +9,15 @@ const Mission = (props) => {
 
   return (
     <tr key={mission.mission_id} className="mission">
-      <td style={{ fontSize: '12px', fontWeight: '700' }}>
+      <td style={{ fontSize: '1rem', fontWeight: '700' }}>
         {mission.mission_name}
       </td>
-      <td style={{ fontSize: '10px', textAlign: 'justify' }}>
+      <td style={{ fontSize: '0.8rem', textAlign: 'justify' }}>
         {mission.description}
       </td>
       <td>
         {mission.reserved && (
-        <Badge className={style.Badge}>Active Member</Badge>
+        <Badge className="active-member">Active Member</Badge>
         )}
         {!mission.reserved && (
         <Badge className={style.Badge2}>Not A Member</Badge>
@@ -25,10 +25,10 @@ const Mission = (props) => {
       </td>
       <td>
         {mission.reserved && (
-        <Button variant="outline-danger" onClick={() => leaveMission(mission.mission_id)}>Leave Mission</Button>
+        <Button className="mission-btn" variant="outline-danger" onClick={() => leaveMission(mission.mission_id)}>Leave Mission</Button>
         )}
         {!mission.reserved && (
-        <Button variant="outline-secondary" onClick={() => joinMission(mission.mission_id)}>Join Mission</Button>
+        <Button className="mission-btn" variant="outline-secondary" onClick={() => joinMission(mission.mission_id)}>Join Mission</Button>
         )}
       </td>
     </tr>
