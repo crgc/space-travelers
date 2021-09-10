@@ -22,7 +22,6 @@ const reducer = (state = initialState, action) => {
         return { ...rocket, reserved: true };
       });
 
-      console.log(newState);
       return newState;
     }
     case CANCEL_RESERVATION: {

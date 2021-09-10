@@ -3,7 +3,9 @@ import { Button, Badge } from 'react-bootstrap';
 import { reserve, cancel } from '../../redux/rockets/rockets';
 
 const Rocket = (props) => {
-  const { id, name, description, imageUrl, reserved } = props; /* eslint-disable-line react/prop-types */
+  const {
+    id, name, description, imageUrl, reserved, /* eslint-disable-line react/prop-types */
+  } = props;
   const dispatch = useDispatch();
 
   const reserveRocket = (id) => {
@@ -25,12 +27,12 @@ const Rocket = (props) => {
           )}
           { description }
         </p>
-          {reserved && (
-            <Button variant="light" onClick={() => cancelReservation(id)}>Cancel Reservation</Button>
-          )}
-          {!reserved && (
-            <Button onClick={() => reserveRocket(id)}>Reserve Rocket</Button>
-          )}
+        {reserved && (
+        <Button variant="light" onClick={() => cancelReservation(id)}>Cancel Reservation</Button>
+        )}
+        {!reserved && (
+        <Button onClick={() => reserveRocket(id)}>Reserve Rocket</Button>
+        )}
       </div>
     </article>
   );
