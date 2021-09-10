@@ -23,8 +23,8 @@ const Missions = () => {
   const missionsList = store;
 
   return (
-    <div className="missions-container">
-      <Table>
+    <div className="missions-container mt-4">
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Mission</th>
