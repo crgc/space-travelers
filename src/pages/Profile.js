@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import MyItems from '../components/profile/MyItems';
 
 const Profile = () => (
