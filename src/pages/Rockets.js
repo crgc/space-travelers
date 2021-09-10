@@ -10,7 +10,7 @@ const Rockets = () => {
     dispatch(getRockets());
   }, []);
 
-  const rockets = useSelector((state) => state.rocketsReducer.rockets);
+  const rockets = useSelector((state) => state.rocketsReducer);
 
   return (
     <div className="rockets-container mt-4">
@@ -22,6 +22,7 @@ const Rockets = () => {
             name={rocket.name}
             imageUrl={rocket.image_url}
             description={rocket.description}
+            reserved={rocket.reserved}
           />
         ))
       }
