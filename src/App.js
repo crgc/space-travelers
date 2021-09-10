@@ -6,12 +6,13 @@ import Profile from './pages/Profile';
 import NoMatch from './pages/NoMatch';
 import Rockets from './pages/Rockets';
 import Navbar from './components/Navbar';
+import NavbarSeparator from './components/NavbarSeparator';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <hr className="navbar-separator" />
+      <NavbarSeparator />
       <Switch>
         <Route exact path="/">
           <Rockets />

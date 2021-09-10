@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
+<p align="center">
+  <a href="https://github.com/crgc/space-travelers">
+    <img src="img/screenshot.png" alt="Logo">
+  </a>
 
-## Available Scripts
+  <h3 align="center">Space Travelers' Hub</h3>
 
-In the project directory, you can run:
+  <p align="center">
+    This project is part of the Microverse React Module.
+    <br />
+    <a href="https://github.com/crgc/space-travelers/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/crgc/space-travelers/issues">Request Feature</a>
+  </p>
+</p>
 
-### `yarn start`
+> A web application for a company that provides commercial and scientific space travel services
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `yarn test`
+- [Node >= 10.16](https://nodejs.org/en/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Setup
 
-### `yarn build`
+* Clone this repository
+```
+git clone https://github.com/crgc/space-travelers.git
+```
+* Change into folder
+```
+cd space-travelers
+```
+* Install dependencies
+```
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Run
+* Start dev server
+```
+npm start
+```
+* Open your browser at http://localhost:3000/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tests
+* Run tests
+```
+npm test
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
 
-### `yarn eject`
+- React
+- Redux
+- HTML5 & CSS3
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Video Presentation
+[Loom link](https://www.loom.com/share/ebe52556591742d58010441fc01d5b84)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Authors
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+👤  **Carlos González**
+- GitHub: [@crgc](https://github.com/crgc)
+- Twitter: [@aclerkofpomier](https://twitter.com/aclerkofpomier)
+- LinkedIn: [Carlos González](https://www.linkedin.com/in/carlosrmgonzalez/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+👤 **Jocyline Magero**
+- Github: [@jmagero](https://github.com/Jmagero)
+- Twitter: [@MagzCelyn](https://twitter.com/MagzCelyn)
+- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
 
-## Learn More
+## Show your support
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Give a ⭐️ if you like this project!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📝 License
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](https://www.mit.edu/~amini/LICENSE.md) licensed.

@@ -32,7 +32,7 @@ const Navigation = () => {
             className="d-inline-block align-top mx-3"
           />
           {' '}
-          Space Traveler&apos;s Hub
+          Space Travelers&apos; Hub
         </Navbar.Brand>
         <Nav>
           {sections.map((section) => (
