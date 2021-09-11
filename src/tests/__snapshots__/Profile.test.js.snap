@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile page renders correctly 1`] = `
+<div
+  className="d-flex flex-row justify-content-around mt-3 profile-container"
+>
+  <div
+    className="list-group-container"
+  >
+    <h3>
+      My Missions
+    </h3>
+    <div
+      className="mt-3 list-group"
+      onKeyDown={[Function]}
+    />
+  </div>
+  <div
+    className="list-group-container"
+  >
+    <h3>
+      My Rockets
+    </h3>
+    <div
+      className="mt-3 list-group"
+      onKeyDown={[Function]}
+    />
+  </div>
+</div>
+`;
